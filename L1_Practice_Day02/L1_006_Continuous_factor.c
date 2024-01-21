@@ -36,10 +36,10 @@ int main(){
     if(max == 0){ //max=0说明N是质数，只存在1和他本身这两个因子
         printf("1\n");
         printf("%d",N);
-    }else{ //max!=0说明N不是质数，至少
+    }else{ //max!=0说明N不是质数，有其他因子，但连续因子个数也可能是1
         printf("%d\n",max);
-        int xStart = start;
-        while (xStart < start + max){
+        int xStart = start; //定义xStart作为递增的连续因子，初值为起始因子start
+        while (xStart < start + max){ //循环进行条件，xStart小于起始因子+最大连续因子个数
             if (xStart != start){
                 printf("*%d", xStart);
             }else{
