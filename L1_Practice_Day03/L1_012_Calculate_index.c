@@ -6,7 +6,7 @@ int main(){
     for(i=0; i<n; i++){
         sum = 2*sum;
     }
-    printf("2^n = %d\n",sum);
+    printf("2^%d = %d\n",n,sum);
     // L1-012 计算指数
     // 分数 5
     // 作者 陈越
