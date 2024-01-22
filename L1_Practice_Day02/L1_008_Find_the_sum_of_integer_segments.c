@@ -1,22 +1,5 @@
 #include<stdio.h>
 int main(){
-    int n1, n2;
-    scanf("%d %d",&n1,&n2);
-    int i, sum = 0, count = 0;
-    for(i=n1; i<=n2; i++){
-        if(count==5){
-            printf("\n");
-            printf("%5d",i);
-            sum += i;
-            count = 1;
-        }else{
-            printf("%5d",i);
-            sum += i;
-            count++;
-        }
-    }
-    printf("\n");
-        printf("Sum = %d\n",sum);
     /*
     L1-008 求整数段和
     分数 10
@@ -35,5 +18,22 @@ int main(){
     7    8
     Sum = 30
     */
-
+    int n1, n2;
+    scanf("%d %d",&n1,&n2);
+    int i, sum = 0, count = 0;
+    for(i=n1; i<=n2; i++){
+        if(count==5){ //如果一排中输入的数字到5个了，就换行输入下一个数字，并把count设为1
+            printf("\n");
+            printf("%5d",i);
+            sum += i;
+            count = 1;
+        }else{
+            printf("%5d",i);
+            sum += i;
+            count++;
+        }
+    }
+    printf("\n");
+    printf("Sum = %d\n",sum);
+    return 0;
 }
