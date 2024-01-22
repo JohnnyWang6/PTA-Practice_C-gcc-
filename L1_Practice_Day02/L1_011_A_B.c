@@ -1,50 +1,7 @@
-// #include<stdio.h>
-// #include<stdlib.h>
-// #include<string.h>
-// int main(){
-//     char s1[10000], s2[10000];
-//     gets(s1);
-//     gets(s2);
-//     int i;
-//     for(i=0; i<strlen(s1); i++){
-//         if(strchr(s2,s1[i])){ //strchr函数：在s2中查找有没有与s1[i]相同的字符，如果有就返回s2中对应字符的指针，如果没有，就返回NULL
-//             continue; //如果有这个字符就不打印，继续循环，相当于s1[i]这个字符没有打印，即删去了
-//         }else{ //如果s2中没有这个字符，就打印s1[i]
-//             printf("%c",s1[i]);
-//         }
-//     }
-//     return 0;
-// }
-//第二种方法
-
-#include <stdio.h>
-#include<string.h>
+#include<stdio.h>
 #include<stdlib.h>
-char delete(char *str,char target){
-	int i,j=0;
-	for(i=0;str[i]!='\0';i++){
-		if(str[i]!=target){
-			str[j++]=str[i];
-		}
-	}
-    str[j] = '\0';
-	return str;
-}
+#include<string.h>
 int main(){
-	char a[100000];
-	char b[100000];
-	gets(a);
-	gets(b);
-	int len1=strlen(a);
-	int len2=strlen(b);
-	for(int i=0;i<len2;i++){
-		delete(a,b[i]);
-	}
-	printf("%s\n",a);
-	return 0;
-}
-
-
     //L1-011 A-B
     // 分数 20
     // 作者 陈越
@@ -60,3 +17,43 @@ int main(){
     // aeiou
     // 输出样例：
     // I lv GPLT!  It's  fn gm!
+    char s1[10000], s2[10000];
+    gets(s1);
+    gets(s2);
+    int i;
+    for(i=0; i<strlen(s1); i++){
+        if(strchr(s2,s1[i])){ //strchr函数：在s2中查找有没有与s1[i]相同的字符，如果有就返回s2中对应字符的指针，如果没有，就返回NULL
+            continue; //如果有这个字符就不打印，继续循环，相当于s1[i]这个字符没有打印，即删去了
+        }else{ //如果s2中没有这个字符，就打印s1[i]
+            printf("%c",s1[i]);
+        }
+    }
+    return 0;
+}
+//第二种方法
+
+// #include <stdio.h>
+// #include<string.h>
+// #include<stdlib.h>
+// char delete(char *str,char target){
+// 	int i,j=0;
+// 	for(i=0;str[i]!='\0';i++){
+// 		if(str[i]!=target){ //如果这个target和str[i]相同就不赋值给str[j++],str的赋值轮空，j没有++,而i还在++,因此达到了错位消除的效果
+// 			str[j++]=str[i];
+// 		}
+// 	}
+//     str[j] = '\0'; //消除target后，把str的最后一位str[j]设为0，防止乱码
+// 	return str;
+// }
+// int main(){
+// 	char a[100000];
+// 	char b[100000];
+// 	gets(a);
+// 	gets(b);
+// 	int len = strlen(b);
+// 	for(int i=0;i<len;i++){
+// 		delete(a,b[i]);
+// 	}
+// 	printf("%s\n",a);
+// 	return 0;
+// }
