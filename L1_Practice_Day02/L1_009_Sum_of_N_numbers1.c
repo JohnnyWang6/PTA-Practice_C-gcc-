@@ -7,7 +7,7 @@ int gcd(long long int p, long long int q){
         }
     }
 int main(){
-    long long int fenZi, fenMu, sumFenZi, sumFenMu;
+    long long int fenZi, fenMu, sumFenZi = 0, sumFenMu = 1; //分子的和的初值为0，分母初值为1
     int i, N, m; //m代表sumFenZi和sumFenMu的最大公约数
     scanf("%d",&N);
     for(i=0; i<N; i++){
