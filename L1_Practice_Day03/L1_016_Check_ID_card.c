@@ -4,27 +4,30 @@ int main(){
     char idCard[19];
     int weight[17] = {7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2}; //权重数组,第一个数字的权重就是7
     char M[11] = {'1','0','X','9','8','7','6','5','4','3','2'}; //检验码字符数组
-    int i, j, N, sum = 0, flag1 = 1, flag2 = 1; //flag1表示前十七个字符是否为数字，flag2表示是否全部通过
+    int i, j, N, sum = 0, flag1, flag2 = 1; //flag1表示前十七个字符是否为数字，flag2表示是否全部通过
     scanf("%d",&N);
     for(i=0; i<N; i++){ //第一层循环表示输入N个idCard
+        sum = 0;
         scanf("%s",idCard);
+        flag1 = 1;
         for(j=0; j<17; j++){ //第二层循环表示遍历前十七个数字求和，判断该idCard是否通过
             if(idCard[j] >= '0' && idCard[j] <= '9'){ //如果该字符是数字，则符合题意，进行累加
-                sum += (idCard[j] - '0') * weight[j];
-            }else{ //如果不是数字，那么该idCard不通过，flag1和flag2变为0，直接break
+                sum = sum + (idCard[j] - '0') * weight[j];
+            }else{ //如果不是数字，那么该idCard不通过，flag1变为0，直接break
                 flag1 = 0;
-                flag2 = 0;
                 break;
             }
         }
-        if(M[sum % 11] != idCard[17] || flag1 == 0){
+        if(M[sum % 11] != idCard[17] || flag1 == 0){ //当idCard的最后一位无法匹配上校验码或前十七位字符有不是数字的时，该idCard不通过，输出它
             printf("%s\n",idCard);
+            flag2 = 0; //如果该idCard确实无法通过，就把flag2变为0。关键：只有当该idCard两项条件都不满足，已经输出的时候，才把flag2设为0
         }
     }
     if(flag2 == 1){
         printf("All passed\n");
     }
-
+    return 0;
+}
     // L1-016 查验身份证
     // 分数 15
     // 一个合法的身份证号码由17位地区、日期编号和顺序编号加1位校验码组成。校验码的计算规则如下：
@@ -54,5 +57,3 @@ int main(){
     // 110108196711301862
     // 输出样例2：
     // All passed
-    return 0;
-}
