@@ -1,17 +1,5 @@
 #include<stdio.h>
 int main(){
-    printf("I\n");
-    printf(" \n");
-    printf("L\n");
-    printf("o\n");
-    printf("v\n");
-    printf("e\n");
-    printf(" \n");
-    printf("G\n");
-    printf("P\n");
-    printf("L\n");
-    printf("T\n");
-
     /*
     L1-026 I Love GPLT
     分数 5
@@ -36,5 +24,16 @@ int main(){
     T
     注意：输出的两个空行中各有一个空格。
     */
+    printf("I\n");
+    printf(" \n");
+    printf("L\n");
+    printf("o\n");
+    printf("v\n");
+    printf("e\n");
+    printf(" \n");
+    printf("G\n");
+    printf("P\n");
+    printf("L\n");
+    printf("T\n");
     return 0;
 }
