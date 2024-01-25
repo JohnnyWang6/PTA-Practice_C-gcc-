@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
 int main(){
     int D, afterTomorrow;
     scanf("%d",&D);
@@ -8,8 +10,6 @@ int main(){
         afterTomorrow = D + 2;
     }
     printf("%d",afterTomorrow);
-
-
     /*
     L1-024 后天
     分数 5
