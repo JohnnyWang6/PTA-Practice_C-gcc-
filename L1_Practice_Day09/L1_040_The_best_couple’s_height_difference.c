@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include<stdio.h>w
 int main(){
     /*
     L1-040 最佳情侣身高差

@@ -1,3 +1,18 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "files.associations": {
+        "iostream": "cpp",
+        "ccomplex": "cpp",
+        "complex": "cpp",
+        "sstream": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "bitset": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "functional": "cpp",
+        "cmath": "cpp",
+        "stdio.h": "c",
+        "vector": "cpp"
+    }
 }
