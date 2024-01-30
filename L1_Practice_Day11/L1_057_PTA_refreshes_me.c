@@ -16,5 +16,6 @@ int main(){
     输出样例：
     PTA shi3 wo3 jing1 shen2 huan4 fa1 !
     */
+    printf("PTA shi3 wo3 jing1 shen2 huan4 fa1 !\n");
     return 0;
 }
