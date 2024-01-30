@@ -46,5 +46,36 @@ int main(){
     & 
     &&&
     */
+    int N, com, i, j;
+    static char str[101][100], c;
+    c = getchar();
+    getchar();
+    scanf("%d",&N);
+    getchar();
+    com = 1;
+    for(i=0; i<N; i++){
+        gets(str[i]);
+        if(com){ //只要有一行字符串不对称就是整体不对称，就不用判断了
+            for(j=0; j<N/2; j++){ //判断这一排字符串是否对称，不对称就需要倒
+                if(str[i][j] != str[i][N-j-1]){
+                    com = 0;
+                    break;
+                }
+            }
+        }
+    }
+    if(com){
+        printf("bu yong dao le\n");
+    }
+    for(i=N-1; i>=0; i--){ //循环是从后往前的
+        for(j=N-1; j>=0; j--){
+            if(str[i][j]=='@'){
+                printf("%c",c);
+            }else if(str[i][j]==' '){
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
     return 0;
 }
