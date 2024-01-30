@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 int main(){
     /*
     L1-059 敲笨钟
@@ -31,5 +32,39 @@ int main(){
     Skipped
     Skipped
     */
+    int N,i,len,j,final,count;
+    scanf("%d",&N);
+    getchar();
+    char str[10001], b[100]=" qiao ben zhong.";
+    for(i=0; i<N; i++){
+        gets(str);
+        j=0;
+        while(str[j]!=','){
+            j++;
+        }
+        if(str[j-1]=='g' && str[j-2]=='n' && str[j-3]=='o'){
+            len = strlen(str);
+            // printf("len=%d",len);
+            str[len] ='\0';
+            if(str[len-2]=='g' && str[len-3]=='n' && str[len-4]=='o'){
+                final = len-1;
+                count=0;
+                while(count!=3){
+                    if(str[final]==' '){
+                        count++;
+                    }
+                    final--;
+                }
+                str[final+1] = '\0';
+                strcat(str,b);
+                // printf("%s qiao ben zhong.\n",str);
+                puts(str);
+            }else{
+                printf("Skipped\n");
+            }
+        }else{
+            printf("Skipped\n");
+        }
+    }
     return 0;
 }
