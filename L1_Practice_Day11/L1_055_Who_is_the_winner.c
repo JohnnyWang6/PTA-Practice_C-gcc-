@@ -22,5 +22,22 @@ int main(){
     输出样例：
     The winner is a: 327 + 1
     */
+    int Pa, Pb, i, countA=0, countB=0, num;
+    scanf("%d %d",&Pa, &Pb);
+    for(i=0; i<3; i++){
+        scanf("%d",&num);
+        if(num == 0){
+            countA++;
+        }else if(num == 1){
+            countB++;
+        }
+    }
+    if(Pa > Pb && countA >= 1){
+        printf("The winner is a: %d + %d\n",Pa,countA);
+    }else if(Pa < Pb && countA == 3){
+        printf("The winner is a: %d + %d\n",Pa,countA);
+    }else{
+        printf("The winner is b: %d + %d\n",Pb,countB);
+    }
     return 0;
 }
