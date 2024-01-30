@@ -24,5 +24,14 @@ int main(){
     22.5
     Hai Xing
     */
+    double Weight, Height, result;
+    scanf("%lf %lf",&Weight, &Height);
+    result = Weight / (Height*Height);
+    printf("%.1lf\n",result);
+    if(result > 25){
+        printf("PANG\n");
+    }else{
+        printf("Hai Xing\n");
+    }
     return 0;
 }
