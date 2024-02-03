@@ -18,5 +18,16 @@ int main(){
     输出样例：
     1.61
     */
+    int N, i;
+    double sum=0, num, result;
+    scanf("%d",&N);
+    for(i=0; i<N; i++){
+        scanf("%lf",&num);
+        num = 1.0/num;
+        sum+=num;
+    }
+    double average = sum / N;
+    result = 1.0 / average;
+    printf("%.2lf\n",result);
     return 0;
 }
