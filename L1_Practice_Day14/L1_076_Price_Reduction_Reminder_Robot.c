@@ -1,5 +1,6 @@
 #include<stdio.h>
 int main(){
+    //commit3
     int N,M,i;
     double price;
     scanf("%d %d",&N,&M);
