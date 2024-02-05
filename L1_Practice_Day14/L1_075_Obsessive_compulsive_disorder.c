@@ -25,6 +25,7 @@ int main(){
     输出样例 3：
     1967-11
     */
+   //commit2
     long int born;
     int year, month;
     scanf("%ld",&born);
