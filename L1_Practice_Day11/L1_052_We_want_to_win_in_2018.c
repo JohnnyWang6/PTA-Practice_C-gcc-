@@ -1,5 +1,6 @@
 #include<stdio.h>
 int main(){
+    
     /*
     L1-052 2018我们要赢
     分数 5
