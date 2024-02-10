@@ -46,6 +46,7 @@ int main(){
     & 
     &&&
     */
+   
     int N, com, i, j;
     static char str[101][100], c;
     c = getchar();
