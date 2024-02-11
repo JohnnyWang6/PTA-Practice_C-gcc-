@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 int main(){
+    
     /*
     L1-058 6翻了
     分数 15
