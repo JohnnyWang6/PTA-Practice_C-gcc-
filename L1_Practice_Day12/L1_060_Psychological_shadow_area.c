@@ -20,6 +20,7 @@ int main(){
     输出样例：
     4000
     */
+   
     int x, y, shadow, triangle, rectangle;
     scanf("%d %d",&x,&y);
     rectangle = (100-x) * y;
