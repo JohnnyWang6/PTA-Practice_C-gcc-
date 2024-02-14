@@ -69,6 +69,7 @@ int main(){
         scanf("%d %d",&x,&y);
         new[i] = num[x-1][y-1];
     }
+    
     scanf("%d",&direction);
     if(direction<=3){
         sum = num[direction-1][0]+num[direction-1][1]+num[direction-1][2];
