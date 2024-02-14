@@ -15,6 +15,7 @@ int main(){
     输出样例：
     -104
     */
+   
     int A, B;
     scanf("%d %d",&A,&B);
     printf("%d\n",A*B);
