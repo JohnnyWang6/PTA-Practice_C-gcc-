@@ -36,5 +36,6 @@ int main(){
         result = A*1.0/B;
         printf("%d/%d=%.2lf\n",A, B, result);
     }
+    
     return 0;
 }
