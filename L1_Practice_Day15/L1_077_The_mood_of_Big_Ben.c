@@ -1,5 +1,6 @@
 #include<stdio.h>
 int main(){
+    
     /*
     L1-077 大笨钟的心情
     分数 15
