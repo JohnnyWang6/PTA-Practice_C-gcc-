@@ -24,6 +24,7 @@ int main(){
                             printf("%c\n",str[j]);
                         }else{
                             printf("%c",str[j]);
+                            
        
                         }
                     }
