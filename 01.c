@@ -24,7 +24,7 @@ int main(){
                             printf("%c\n",str[j]);
                         }else{
                             printf("%c",str[j]);
-                            
+
        
                         }
                     }
@@ -37,6 +37,7 @@ int main(){
                     printf("%c",str[j]);
                 }
             }
+            
             count=0;
         }
     }
