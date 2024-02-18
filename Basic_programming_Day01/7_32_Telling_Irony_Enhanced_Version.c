@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include<string.h>
 int main(){
+    
     /*
     7-32 说反话-加强版
     分数 20
