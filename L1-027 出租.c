@@ -65,6 +65,7 @@ int main(){
     printf("};\nint[] index = new int[]{");
     for(j=0; j<11; j++){
         if(j==10){
+            
             printf("%d",index[j]);
             break;
         }
