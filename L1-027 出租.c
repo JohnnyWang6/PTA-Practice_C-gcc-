@@ -30,8 +30,7 @@ void BubbleSort(int *a, int n){ //冒泡排序 降序
         }
     }
 }
-int main()
-{
+int main(){
     int num[10]={0}; //num[]记录电话号码中出现的数字，如果出现，那就把索引为这个数字的值设为1
     char str[11]; //记录输入的电话号码
     scanf("%s",str);
