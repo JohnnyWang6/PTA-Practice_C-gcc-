@@ -5,9 +5,9 @@
     单位 浙江大学
     本题要求你写个程序把给定的符号打印成沙漏的形状。例如给定17个“*”，要求按下列格式打印
     *****
-    ***
-    *
-    ***
+     ***
+      *
+     ***
     *****
     所谓“沙漏形状”，是指每行输出奇数个符号；各行符号中心对齐；相邻两行符号数差2；符号数先从大到小顺序递减到1，
     再从小到大顺序递增；首尾符号数相等。
@@ -20,9 +20,53 @@
     19 *
     输出样例:
     *****
-    ***
-    *
-    ***
+     ***
+      *
+     ***
     *****
     2
 */
+#include<stdio.h>
+int main(){
+    int n=1,i,j,k,N,half,x,sum;
+    char c;
+    scanf("%d %c",&N,&c);
+    half = (N-1)/2;
+    x=3;
+    sum=x;
+    while(1){
+        if(half>=sum){
+            n++;
+        }else{
+            sum-=x;
+            x-=2;
+            break;
+        }
+        x+=2;
+        sum+=x;
+    }
+    sum = sum*2+1;
+    for(i=0;i<n;i++){
+        for(j=0;j<i;j++){
+            printf(" ");
+        }
+        for(k=0;k<x;k++){
+            printf("%c",c);
+        }
+        printf("\n");
+        x-=2;
+    }
+    x=3;
+    for(i=n;i>1;i--){
+        for(j=0;j<i-2;j++){
+            printf(" ");
+        }
+        for(k=0;k<x;k++){
+            printf("%c",c);
+        }
+        printf("\n");
+        x+=2;
+    }
+    printf("%d\n",N-sum);
+    return 0;
+}
