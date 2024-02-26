@@ -25,3 +25,24 @@
     3310120150912002 2
     3310120150912119 1
 */
+#include<stdio.h>
+int main(){
+    int N,i,j,M,num;
+    scanf("%d",&N);
+    int idCard[N][2];  //idCard[i][0]代表试机座位号，idCard[i][1]代表考试座位号
+    char ID[N][17];
+    for(i=0;i<N;i++){
+        scanf("%s %d %d",ID[i],&idCard[i][0],&idCard[i][1]);
+    }
+    scanf("%d",&M);
+    for(i=0;i<M;i++){
+        scanf("%d",&num);
+        for(j=0;j<N;j++){
+            if(idCard[j][0]==num){
+                printf("%s %d\n",ID[j],idCard[j][1]);
+                break;
+            }
+        }
+    }
+    return 0;
+}
