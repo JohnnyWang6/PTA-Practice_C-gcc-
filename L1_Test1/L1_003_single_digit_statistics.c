@@ -16,3 +16,21 @@
     1:3
     3:1
 */
+#include<stdio.h>
+#include<string.h>
+int main(){
+    int i,len,x,num[10]={0};
+    char str[1001];
+    scanf("%s",str);
+    len = strlen(str);
+    for(i=0;i<len;i++){
+        x = str[i]-'0';
+        num[x]++;
+    }
+    for(i=0;i<10;i++){
+        if(num[i]!=0){
+            printf("%d:%d\n",i,num[i]);
+        }
+    }
+    return 0;
+}
