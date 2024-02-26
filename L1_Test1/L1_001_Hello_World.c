@@ -10,3 +10,8 @@ L1-001 Hello World
 输出样例：
 Hello World
 */
+#include<stdio.h>
+int main(){
+    printf("Hello World!\n");
+    return 0;
+}

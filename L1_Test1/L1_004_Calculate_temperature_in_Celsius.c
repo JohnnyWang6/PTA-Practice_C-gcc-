@@ -13,3 +13,11 @@ L1-004 计算摄氏温度
 输出样例:
 Celsius = 65
 */
+#include<stdio.h>
+int main(){
+    int huaTem,Celsius;
+    scanf("%d",&huaTem);
+    Celsius = 5*(huaTem-32)/9;
+    printf("Celsius = %d\n",Celsius);
+    return 0;
+}
