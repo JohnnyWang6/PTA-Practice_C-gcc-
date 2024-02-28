@@ -52,7 +52,6 @@ int main(){
                 }
                 continue;
             }
-            printf("看看我执行了没\n");
             sum = sum+(str[j]-'0')*weight[j];
         }
     }
