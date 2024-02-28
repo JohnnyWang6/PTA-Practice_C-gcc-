@@ -10,3 +10,8 @@
     输出样例：
     This is a simple problem.
 */
+#include<stdio.h>
+int main(){
+    printf("This is a simple problem.\n");
+    return 0;
+}
