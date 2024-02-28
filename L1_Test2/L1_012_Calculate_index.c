@@ -14,3 +14,13 @@
     输出样例：
     2^5 = 32
 */
+#include<stdio.h>
+int main(){
+    int n,i,x=2;
+    scanf("%d",&n);
+    for(i=1;i<n;i++){
+        x*=2;
+    }
+    printf("2^%d = %d\n",n,x);
+    return 0;
+}
