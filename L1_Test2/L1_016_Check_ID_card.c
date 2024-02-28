@@ -31,3 +31,37 @@
     输出样例2：
     All passed
 */
+#include<stdio.h>
+#include<string.h>
+int main(){
+    int N,i,j,weight[17]={7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2},flag=1,count=0,len,sum,x;
+    scanf("%d",&N);
+    char str[19],problem[N][19],check[11]={'1','0','X','9','8','7','6','5','4','3','2'};
+    for(i=0;i<N;i++){
+        sum=0;
+        scanf("%s",str);
+        len=strlen(str);
+        for(j=0;j<len;j++){
+            if(j==len-1){
+                printf("sum=%d\n",sum);
+                x=sum%11;
+                if(str[j]!=check[x]){
+                    flag=0;
+                    strcpy(problem[count],str);
+                    count++;
+                }
+                continue;
+            }
+            printf("看看我执行了没\n");
+            sum = sum+(str[j]-'0')*weight[j];
+        }
+    }
+    if(flag==1){
+        printf("All passed\n");
+    }else{
+        for(i=0;i<count;i++){
+            puts(problem[i]);
+        }
+    }
+    return 0;
+}
