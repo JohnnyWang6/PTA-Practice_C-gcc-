@@ -20,3 +20,18 @@
     aaaaaaaaaa
     aaaaaaaaaa
 */
+#include<stdio.h>
+int main(){
+    int N,i,j,line,row;
+    char c;
+    scanf("%d %c",&N,&c);
+    row = N;
+    line = (int)(N+1)/2;
+    for(i=0;i<line;i++){
+        for(j=0;j<row;j++){
+            printf("%c",c);
+        }
+        printf("\n");
+    }
+    return 0;
+}
