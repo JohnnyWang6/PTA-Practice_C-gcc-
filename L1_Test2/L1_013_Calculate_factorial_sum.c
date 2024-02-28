@@ -13,3 +13,17 @@
     输出样例：
     9
 */
+#include<stdio.h>
+int main(){
+    int N,S=0,i,j,num;
+    scanf("%d",&N);
+    for(i=N;i>=1;i--){
+        num=1;
+        for(j=i;j>=1;j--){
+            num*=j;
+        }
+        S+=num;
+    }
+    printf("%d\n",S);
+    return 0;
+}
