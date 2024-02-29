@@ -14,3 +14,18 @@
     输出样例：
     3 6
 */
+#include<stdio.h>
+int main(){
+    int N,i,JiCount=0,OuCount=0,num;
+    scanf("%d",&N);
+    for(i=0;i<N;i++){
+        scanf("%d",&num);
+        if(num%2==0){
+            OuCount++;
+        }else{
+            JiCount++;
+        }
+    }
+    printf("%d %d\n",JiCount,OuCount);
+    return 0;
+}
