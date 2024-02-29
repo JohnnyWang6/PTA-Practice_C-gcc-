@@ -13,3 +13,10 @@
     I'm gonna WIN!
     I'm gonna WIN!
 */
+#include<stdio.h>
+int main(){
+    printf("I'm gonna WIN!\n");
+    printf("I'm gonna WIN!\n");
+    printf("I'm gonna WIN!\n");
+    return 0;
+}
