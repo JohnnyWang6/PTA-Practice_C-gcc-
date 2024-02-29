@@ -28,3 +28,32 @@
     A
     1
 */
+#include<stdio.h>
+int main(){
+    int A,B,N,i,A1,A2,B1,B2,sum,drinkA=0,drinkB=0;
+    scanf("%d %d",&A,&B);
+    scanf("%d",&N);
+    for(i=0;i<N;i++){
+        scanf("%d %d %d %d",&A1,&A2,&B1,&B2);
+        sum = A1+B1;
+        if(A2==sum && B2==sum){
+            continue;
+        }else if(A2==sum){
+            drinkA++;
+            A--;
+        }else if(B2==sum){
+            drinkB++;
+            B--;
+        }
+        if(A<0){
+            printf("A\n");
+            printf("%d\n",drinkB);
+            break;
+        }else if(B<0){
+            printf("B\n");
+            printf("%d\n",drinkA);
+            break;
+        }
+    }
+    return 0;
+}
