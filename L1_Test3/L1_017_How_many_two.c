@@ -15,3 +15,28 @@
     输出样例：
     81.82%
 */
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[52];
+    gets(str);
+    int len,i,flag1=0,flag2=0,count2=0;
+    len = strlen(str);
+    for(i=0;i<len;i++){
+        if(str[i]=='2'){
+            count2++;
+        }
+    }
+    double degree;
+    if(str[0]=='-'){
+        degree = count2*1.0/(len-1)*1.5;
+    }else{
+        degree = count2*1.0/len;
+    }
+    if(str[len-1]%2==0){
+        degree*=2;
+    }
+    degree*=100;
+    printf("%.2lf%%\n",degree);
+    return 0;
+}
