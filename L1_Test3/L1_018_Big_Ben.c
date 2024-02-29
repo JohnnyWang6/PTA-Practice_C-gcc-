@@ -24,3 +24,20 @@
     输出样例2：
     Only 07:05.  Too early to Dang.
 */
+#include<stdio.h>
+int main(){
+    int hh,mm,count,i;
+    scanf("%02d:%02d",&hh,&mm);
+    if(hh>=0&&hh<12 || hh==12&&mm==0){
+        printf("Only %02d:%02d.  Too early to Dang.\n",hh,mm);
+        return 0;
+    }
+    count = hh - 12;
+    if(mm>0){
+        count++;
+    }
+    for(i=0;i<count;i++){
+        printf("Dang");
+    }
+    return 0;
+}

@@ -14,3 +14,14 @@
     输出样例：
     5
 */
+#include<stdio.h>
+int main(){
+    int D;
+    scanf("%d",&D);
+    if(D>5){
+        printf("%d\n",D+2-7);
+    }else{
+        printf("%d\n",D+2);
+    }
+    return 0;
+}
