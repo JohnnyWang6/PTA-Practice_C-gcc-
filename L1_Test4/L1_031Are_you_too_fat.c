@@ -22,3 +22,29 @@
     You are tai shou le!
     You are tai pang le!
 */
+#include<stdio.h>
+int main(){
+    int N,i;
+    double standardW,mistake,H,W,minus;
+    scanf("%d",&N);
+    for(i=0;i<N;i++){
+        scanf("%lf %lf",&H,&W);
+        standardW = (H-100)*0.9;
+        double realW = W/2.0;
+        if(realW>=standardW){
+            minus = realW-standardW;
+        }else{
+            minus = standardW-realW;
+        }
+        if(minus<standardW*0.1){
+            printf("You are wan mei!\n");
+        }else{
+            if(realW>standardW){
+                printf("You are tai pang le!\n");
+            }else{
+                printf("You are tai shou le!\n");
+            }
+        }
+    }
+    return 0;
+}
