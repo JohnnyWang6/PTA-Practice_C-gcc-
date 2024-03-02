@@ -16,3 +16,28 @@
     Yes
     No
 */
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int N,i,num,j,flag;
+    scanf("%d",&N);
+    for(i=0;i<N;i++){
+        scanf("%d",&num);
+        if(num<=1){
+            printf("No\n");
+            continue;
+        }
+        flag=0;
+        for(j=2;j<sqrt(num);j++){
+            if(num%j==0){
+                printf("No\n");
+                flag=1;
+                break;
+            }
+        }
+        if(flag==0){
+            printf("Yes\n");
+        }
+    }
+    return 0;
+}
