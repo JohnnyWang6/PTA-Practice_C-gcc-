@@ -14,3 +14,12 @@
     输出样例：
     124.2
 */
+#include<stdio.h>
+int main(){
+    int H;
+    double standard;
+    scanf("%d",&H);
+    standard = (H-100)*1.0*0.9*2;
+    printf("%.1lf\n",standard);
+    return 0; 
+}
