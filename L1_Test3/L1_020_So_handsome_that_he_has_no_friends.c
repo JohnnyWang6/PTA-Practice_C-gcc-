@@ -33,3 +33,37 @@
     输出样例2：
     No one is handsome
 */
+#include<stdio.h>
+int main(){
+    int N,M,i,j,a[100000]={0} ,K,ID,count=0;
+    scanf("%d",&N);
+    for(i=0;i<N;i++){
+        scanf("%d",&K);
+        if(K>1){
+            while(K--){
+                scanf("%d",&ID);
+                a[ID]=1;
+            }
+        }else{
+            scanf("%d",&ID);
+        }
+    }
+    scanf("%d",&M);
+    for(i=0;i<M;i++){
+        scanf("%d",&ID);
+        if(a[ID]==0){
+            if(count==0){
+                printf("%05d",ID);
+                count++;
+                a[ID]=1;
+                continue;
+            }
+            printf(" %05d",ID);
+            a[ID]=1;
+        }
+    }
+    if(count==0){
+        printf("No one is handsome\n");
+    }
+    return 0;
+}
