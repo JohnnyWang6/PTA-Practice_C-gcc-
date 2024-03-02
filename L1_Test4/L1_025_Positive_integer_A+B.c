@@ -23,3 +23,57 @@
     输出样例3：
     ? + ? = ?
 */
+#include<stdio.h>
+#include<string.h>
+int main(){
+    int i,A=0,B=0,lenA,lenB,t=1,flagA=1,flagB=1;
+    char a[20],b[20];
+    scanf("%s",a);
+    gets(b);//b字符串的第一个字符必是空格，因为scanf的输入格式是遇空格就结束
+    lenA = strlen(a);
+    lenB = strlen(b);
+    for(i=lenA-1;i>=0;i--){
+        if(a[i]-'0'<0||a[i]-'0'>9){
+            flagA=0;
+            break;
+        }
+        A+=t*(a[i]-'0');
+        t*=10;
+    }
+    if(A>1000 || A<1){
+            flagA=0;
+        }
+    t=1;
+    for(i=lenB-1;i>=1;i--){
+        if(b[i]-'0'<0||b[i]-'0'>9){
+            flagB=0;
+            break;
+        }
+        B+=t*(b[i]-'0');
+        t*=10;
+    }
+    if(B>1000||B<1){
+            flagB=0;
+        }
+    if(flagA==1 && flagB==1){
+        printf("%d + %d = %d",A, B, A+B);
+    }else if(flagA==0 && flagB==0){
+        printf("? + ? = ?");
+    }else if(flagA == 0 && flagB != 0){
+        printf("? + %d = ?",B);
+    }else if(flagA != 0 && flagB == 0){
+        printf("%d + ? = ?",A);
+    }
+
+
+    // if(flagA==1&&flagB==1){
+    //     printf("%d + %d = %d\n",A,B,A+B);
+    // }else if(flagA==1&&flagB==0){
+    //     printf("%d + ? = ?\n",A);
+    // }else if(flagA==0&&flagB==1){
+    //     printf("? + %d = ?\n",B);
+    // }else if(flagA==0&&flagB==0){
+    //     printf("? + ? = ?\n");
+    // }
+    return 0;
+}
