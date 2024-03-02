@@ -22,3 +22,12 @@
     T
     注意：输出的两个空行中各有一个空格。
 */
+#include<stdio.h>
+int main(){
+    int i;
+    char str[12]="I Love GPLT";
+    for(i=0;i<11;i++){
+        printf("%c\n",str[i]);
+    }
+    return 0;
+}
